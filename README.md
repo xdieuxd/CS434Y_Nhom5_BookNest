@@ -3,7 +3,7 @@
 ## Giới thiệu
 **BookNest** là hệ thống bán và đọc sách trực tuyến, cho phép:
 - Người dùng tìm kiếm, xem chi tiết và mua sách (giấy/PDF).
-- Thanh toán trực tuyến (sandbox/mock) hoặc khi nhận hàng (COD).
+- Thanh toán trực tuyến hoặc khi nhận hàng (COD).
 - Lưu trữ và đọc sách PDF trong thư viện cá nhân.
 - Quản lý giỏ hàng, đơn hàng, đánh giá và bình luận.
 - Nhân viên và quản trị viên có thể quản lý danh mục sách, đơn hàng, thống kê doanh thu.
@@ -12,7 +12,7 @@ Mục tiêu: cung cấp trải nghiệm đọc sách thuận tiện mọi lúc, 
 
 ## Công nghệ sử dụng
 - **Backend:** Spring Boot (Java, RESTful API, xử lý nghiệp vụ)
-- **Frontend:** HTML5, CSS3, JavaScript (template engine: Thymeleaf hoặc JSP)
+- **Frontend:** HTML5, CSS3, JavaScript
 - **Database:** MySQL
 - **Khác:** Maven, Bootstrap (CSS), Git/GitHub
 
