@@ -17,7 +17,7 @@ Mục tiêu: cung cấp trải nghiệm đọc sách thuận tiện mọi lúc, 
 - **Khác:** Maven, Bootstrap (CSS), Git/GitHub, Trello để quản lý công việc
 
 ## Chức năng chính
-## Người dùng:
+### Người dùng:
 - Đăng ký, đăng nhập, quản lý tài khoản cá nhân.
 - Tìm kiếm và lọc sách theo thể loại, tác giả, giá.
 - Quản lý giỏ hàng, đặt mua sách.
@@ -25,20 +25,20 @@ Mục tiêu: cung cấp trải nghiệm đọc sách thuận tiện mọi lúc, 
 - Quản lý thư viện cá nhân, đọc sách PDF trực tuyến.
 - Đánh giá và bình luận sách.
 
-## Nhân viên:
+### Nhân viên:
 - Quản lý đơn đặt hàng (cập nhật trạng thái, xử lý giao hàng).
 - Quản lý danh mục sách (thêm, sửa, xóa, cập nhật kho).
 - Tạo đơn hàng trực tiếp cho khách.
 - Quản lý tài khoản khách hàng.
 
-## Quản trị viên:
+### Quản trị viên:
 - Quản lý tất cả tài khoản người dùng.
 - Quản lý sách và đơn hàng
 - Thống kê doanh thu, số lượng người dùng, sách bán chạy
 
 
 ## Cơ sở dữ liệu
-## Một số bảng chính trong hệ thống:
+### Một số bảng chính trong hệ thống:
 - nguoi_dung: lưu thông tin người dùng, vai trò.
 - sach, the_loai, tac_gia: lưu kho sách và thông tin liên quan.
 - gio_hang, chi_tiet_gio_hang: quản lý giỏ hàng.
