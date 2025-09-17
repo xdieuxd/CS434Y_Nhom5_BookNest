@@ -1,0 +1,98 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>Quản lý sách</title>
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2><i class="fa-solid fa-book"></i> BookNest</h2>
+    <ul>
+      <li>
+        <a href="#"><i class="fa-solid fa-book"></i> Quản lý sách</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-solid fa-box"></i> Quản lý đơn hàng</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-solid fa-users"></i> Quản lý tài khoản</a>
+      </li>
+      <li>
+        <a href="/CS434Y_Nhom5_BookNest/frontend/nhanvien/taodonhang/index.html"
+          ><i class="fa-solid fa-cart-plus"></i> Tạo đơn hàng</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="title">Trang nhân viên</div>
+    <div class="user"><i class="fa-solid fa-user"></i> Xuân Diệu</div>
+  </div>
+
+  <!-- Nội dung -->
+  <div class="main">
+    <div class="book-box">
+      <h1><i class="fa-solid fa-book"></i> Quản lý sách</h1>
+
+      <button class="add-button">
+        <i class="fa-solid fa-plus"></i> Thêm sách
+      </button>
+
+      <table class="table-book">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tên sách</th>
+            <th>Giá</th>
+            <th>Tồn</th>
+            <th>Tác giả</th>
+            <th>Thể loại</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>206 Món Canh Dinh Dưỡng Cho Trẻ Em</td>
+            <td>50,000 đ</td>
+            <td>11</td>
+            <td>Mai Ngọc</td>
+            <td>Ẩm thực - Nấu ăn</td>
+            <td>
+              <div class="action-buttons">
+                <button><i class="fa-solid fa-pen"></i></button>
+                <button class="delete">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>120 Món Súp Bổ Dưỡng Cho Trẻ Em Và Người Bệnh</td>
+            <td>40,000 đ</td>
+            <td>20</td>
+            <td>Mỹ Hạnh</td>
+            <td>Ẩm thực - Nấu ăn</td>
+            <td>
+              <div class="action-buttons">
+                <button><i class="fa-solid fa-pen"></i></button>
+                <button class="delete">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

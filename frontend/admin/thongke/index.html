@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="style.css" />
+
+<div class="sidebar">
+  <h2>📚 BookNest</h2>
+  <ul>
+    <li><a href="#">Quản lý sách</a></li>
+    <li><a href="#">Quản lý đơn hàng</a></li>
+    <li><a href="#">Quản lý tài khoản</a></li>
+    <li><a href="#">Tạo đơn hàng</a></li>
+    <li><a href="#">Thống kê</a></li>
+    <li>
+      <a href="/CS434Y_Nhom5_BookNest/frontend/nhanvien/taodonhang/index.html"
+        >nhân viên</a
+      >
+    </li>
+  </ul>
+</div>
+
+<div class="header">
+  <div class="title">Trang Admin</div>
+  <div class="user">admin</div>
+</div>
+
+<div class="main">
+  <div class="stat-box">
+    <h1>📊 Thống kê doanh thu và đơn hàng</h1>
+
+    <div class="filter-buttons">
+      <button>Theo tuần</button>
+      <button>Theo tháng</button>
+      <button>Theo năm</button>
+    </div>
+
+    <div class="chart-box">
+      <h3>📅 Thống kê theo năm (2020 → hiện tại)</h3>
+      <!-- Biểu đồ -->
+      <canvas id="chartDoanhThu" width="400" height="200"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- ChartJS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById("chartDoanhThu").getContext("2d");
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["2020", "2021", "2022", "2023", "2024"],
+      datasets: [
+        {
+          label: "Doanh thu (VND)",
+          data: [120000000, 200000000, 250000000, 300000000, 350000000],
+          backgroundColor: "rgba(34,197,94,0.8)",
+        },
+        {
+          label: "Số đơn hàng",
+          data: [500, 800, 950, 1100, 1250],
+          backgroundColor: "rgba(59,130,246,0.8)",
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          ticks: { color: "#c4c4c4" },
+          grid: { color: "#3b3754" },
+        },
+        x: {
+          ticks: { color: "#c4c4c4" },
+          grid: { color: "#3b3754" },
+        },
+      },
+      plugins: {
+        legend: {
+          labels: { color: "#fff" },
+        },
+      },
+    },
+  });
+</script>

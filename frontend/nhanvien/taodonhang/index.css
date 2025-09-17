@@ -1,0 +1,161 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Layout tổng */
+body {
+  background-color: #e2e2e4;
+  color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #2c2740;
+  height: 100vh;
+  padding: 20px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar h2 {
+  color: #4ade80;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #c4c4c4;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #fff;
+}
+
+/* Header */
+.header {
+  margin-left: 240px;
+  background: #2c2740;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ✅ căn giữa tiêu đề */
+  position: relative; /* ✅ để đặt user sang phải */
+  color: #fff;
+}
+
+/* Tiêu đề "Trang nhân viên" */
+.header .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Tên nhân viên */
+.header .user {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #c4c4c4;
+  position: absolute; /* ✅ đẩy sang bên phải */
+  right: 20px; /* ✅ cách lề phải 20px */
+}
+
+.header .user::before {
+  content: "👤";
+  font-size: 14px;
+}
+
+/* Container chính */
+.main {
+  margin-left: 240px;
+  padding: 30px;
+}
+
+.main h1 {
+  font-size: 20px;
+  color: #f43f5e;
+  margin-bottom: 20px;
+}
+
+/* Form tạo đơn */
+.form-create {
+  background: #2c2740;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-create input,
+.form-create select {
+  background: #1e1b2e;
+  border: 1px solid #3b3754;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 5px 10px 15px 0;
+  color: #fff;
+  width: calc(25% - 10px);
+}
+
+.form-create input:focus {
+  border-color: #6366f1;
+  outline: none;
+}
+
+/* Bảng chọn sách */
+.table-book {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table-book thead {
+  background: #1e1b2e;
+}
+
+.table-book th,
+.table-book td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #3b3754;
+  font-size: 14px;
+}
+
+.table-book th {
+  color: #c4c4c4;
+  font-weight: 500;
+}
+
+.table-book td {
+  color: #fff;
+}
+
+.table-book tr:hover {
+  background: #3b3754;
+}
+
+.table-book input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  background: #1e1b2e;
+  border: 1px solid #3b3754;
+  border-radius: 6px;
+  color: #fff;
+}

@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="index.css" />
+
+<div class="sidebar">
+  <h2>📚 BookNest</h2>
+  <ul>
+    <li>
+      <a href="/CS434Y_Nhom5_BookNest/frontend/nhanvien/quanlysach/index.html"
+        >Quản lý sách</a
+      >
+    </li>
+    <li><a href="#">Quản lý đơn hàng</a></li>
+    <li><a href="#">Quản lý tài khoản</a></li>
+    <li>
+      <a href="/CS434Y_Nhom5_BookNest/frontend/admin/thongke/index.html"
+        >admin</a
+      >
+    </li>
+    <li><a href="#">Tạo đơn hàng</a></li>
+  </ul>
+</div>
+
+<div class="header">
+  <div class="title">Trang nhân viên</div>
+  <div class="user">Tài khoản</div>
+</div>
+
+<div class="main">
+  <h1>Tạo đơn hàng trực tiếp</h1>
+  <div class="form-create">
+    <input type="text" placeholder="Họ tên người nhận" />
+    <input type="text" placeholder="SĐT người nhận" />
+    <input type="text" placeholder="Địa chỉ giao hàng" />
+    <select>
+      <option>Tiền mặt</option>
+      <option>Chuyển khoản</option>
+    </select>
+
+    <input type="text" placeholder="🔍 Tìm kiếm tên sách..." />
+
+    <table class="table-book">
+      <thead>
+        <tr>
+          <th>Tên sách</th>
+          <th>Giá</th>
+          <th>Tồn</th>
+          <th>Số lượng mua</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>206 Món Canh Dinh Dưỡng Cho Trẻ Em</td>
+          <td>50,000 đ</td>
+          <td>11</td>
+          <td><input type="number" value="1" /></td>
+        </tr>
+        <tr>
+          <td>120 Món Súp Bổ Dưỡng Cho Trẻ Em Và Người Bệnh</td>
+          <td>40,000 đ</td>
+          <td>20</td>
+          <td><input type="number" value="1" /></td>
+        </tr>
+        <tr>
+          <td>Món Ăn Giúp Trẻ Thông Minh Học Giỏi</td>
+          <td>0 đ</td>
+          <td>14</td>
+          <td><input type="number" value="1" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
