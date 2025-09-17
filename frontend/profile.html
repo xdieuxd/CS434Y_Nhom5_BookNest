@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thông tin cá nhân - BookNest</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1E1E3F] text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 bg-[#1E1E3F] shadow-md">
+    <div class="flex items-center space-x-2">
+      <span class="text-2xl font-bold">Booknest</span>
+    </div>
+    <nav class="flex items-center space-x-6">
+      <a href="#" class="hover:text-pink-400">Trang chủ</a>
+      <a href="#" class="hover:text-pink-400">Thư viện</a>
+      <a href="#" class="hover:text-pink-400">Đơn hàng</a>
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center">👤</div>
+        <span class="font-semibold">Username</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <section class="flex justify-center mt-10">
+    <div class="bg-[#2A2A4A] w-full max-w-lg p-6 rounded-lg shadow-lg">
+      <!-- Thông tin cá nhân -->
+      <h2 class="flex items-center space-x-2 text-lg font-semibold mb-4">
+        <span>👤</span><span>Thông tin cá nhân</span>
+      </h2>
+      <form class="space-y-4">
+        <div>
+          <label class="block mb-1 text-sm">Họ tên</label>
+          <input type="text" class="w-full px-3 py-2 rounded text-black" placeholder="Nhập họ tên">
+        </div>
+        <div>
+          <label class="block mb-1 text-sm">Email</label>
+          <input type="email" class="w-full px-3 py-2 rounded text-black" placeholder="Nhập email">
+        </div>
+        <div>
+          <label class="block mb-1 text-sm">Số điện thoại</label>
+          <input type="text" class="w-full px-3 py-2 rounded text-black" placeholder="Nhập số điện thoại">
+        </div>
+        <div>
+          <label class="block mb-1 text-sm">Địa chỉ</label>
+          <input type="text" class="w-full px-3 py-2 rounded text-black" placeholder="Nhập địa chỉ">
+        </div>
+        <button type="submit" class="w-full py-2 bg-pink-500 hover:bg-pink-600 rounded-lg">
+          Cập nhật
+        </button>
+      </form>
+
+      <!-- Đổi mật khẩu -->
+      <h2 class="flex items-center space-x-2 text-lg font-semibold mt-8 mb-4">
+        <span>🔒</span><span>Đổi mật khẩu</span>
+      </h2>
+      <form class="space-y-4">
+        <div>
+          <label class="block mb-1 text-sm">Mật khẩu hiện tại</label>
+          <input type="password" class="w-full px-3 py-2 rounded text-black" placeholder="Nhập mật khẩu hiện tại">
+        </div>
+        <div>
+          <label class="block mb-1 text-sm">Mật khẩu mới</label>
+          <input type="password" class="w-full px-3 py-2 rounded text-black" placeholder="Nhập mật khẩu mới">
+        </div>
+        <div>
+          <label class="block mb-1 text-sm">Nhập lại mật khẩu</label>
+          <input type="password" class="w-full px-3 py-2 rounded text-black" placeholder="Nhập lại mật khẩu">
+        </div>
+        <button type="submit" class="w-full py-2 bg-pink-500 hover:bg-pink-600 rounded-lg">
+          Đổi mật khẩu
+        </button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>

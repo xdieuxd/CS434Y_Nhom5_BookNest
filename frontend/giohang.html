@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Giỏ hàng - BookNest</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1E1E3F] text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 bg-[#1E1E3F] shadow-md">
+    <div class="flex items-center space-x-2">
+      <span class="text-2xl font-bold">Booknest</span>
+    </div>
+    <nav class="flex items-center space-x-6">
+      <a href="#" class="hover:text-pink-400">Trang chủ</a>
+      <a href="#" class="hover:text-pink-400">Thư viện</a>
+      <a href="#" class="hover:text-pink-400">Đơn hàng</a>
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center">👤</div>
+        <span class="font-semibold">Username</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Cart -->
+  <section class="px-6 py-8">
+    <h2 class="text-xl font-semibold mb-4">Giỏ hàng</h2>
+
+    <div class="grid grid-cols-3 gap-6">
+      <!-- Bảng sản phẩm -->
+      <div class="col-span-2 bg-gray-100 text-black rounded-lg overflow-hidden">
+        <table class="w-full border-collapse">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="px-3 py-2 text-left">
+                <input type="checkbox" />
+                <span class="ml-2">Chọn sản phẩm</span>
+              </th>
+              <th class="px-3 py-2">Số lượng</th>
+              <th class="px-3 py-2">Thành tiền</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Một sản phẩm -->
+            <tr class="border-t">
+              <td class="px-3 py-3 flex items-center space-x-4">
+                <input type="checkbox" />
+                <div class="w-14 h-20 bg-gray-300 flex items-center justify-center"></div>
+                <div>
+                  <h3 class="font-semibold">Tên sách</h3>
+                  <p class="text-sm text-gray-600">0 VND</p>
+                </div>
+              </td>
+              <td class="px-3 py-3 text-center">
+                <div class="flex items-center justify-center space-x-2">
+                  <button class="px-2 py-1 bg-gray-300 rounded">-</button>
+                  <input type="text" value="1" class="w-10 text-center border rounded" />
+                  <button class="px-2 py-1 bg-gray-300 rounded">+</button>
+                </div>
+              </td>
+              <td class="px-3 py-3 text-center">0 VND</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Tổng tiền -->
+      <div class="bg-gray-100 text-black p-4 rounded-lg">
+        <p class="font-semibold mb-4">Tổng thành tiền:</p>
+        <p class="text-lg font-bold mb-4">0 VND</p>
+        <button class="w-full py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-lg">
+          Thanh toán
+        </button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

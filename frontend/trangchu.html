@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>BookNest</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1E1E3F] text-white min-h-screen">
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 bg-[#1E1E3F] shadow-md">
+    <div class="flex items-center space-x-2">
+      <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded"></div>
+      <span class="text-2xl font-bold">BookNest</span>
+    </div>
+    <button class="px-4 py-2 bg-pink-500 hover:bg-pink-600 rounded-lg">Login</button>
+  </header>
+
+  <!-- Search -->
+  <div class="flex flex-col items-center mt-6 space-y-3">
+    <input type="text" placeholder="Tìm kiếm sách..."
+      class="px-4 py-2 rounded-lg w-80 text-black outline-none"/>
+    <select class="px-1 py-2 rounded-lg w-80 text-black">
+      <option>Tất cả thể loại</option>
+      <option>Văn học</option>
+      <option>Kỹ năng</option>
+      <option>Kinh tế</option>
+    </select>
+  </div>
+
+  <!-- Books grid -->
+  <div id="book-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 px-6 py-8">
+    <!-- JS sẽ render sách ở đây -->
+  </div>
+
+  <script>
+    // Dữ liệu giả lập
+    const books = [
+      { name: "Tên sách 1", price: "0 VND" },
+      { name: "Tên sách 2", price: "120,000 VND" },
+      { name: "Tên sách 3", price: "140,000 VND" },
+      { name: "Tên sách 4", price: "0 VND" },
+      { name: "Tên sách 5", price: "90,000 VND" },
+      { name: "Tên sách 6", price: "90,000 VND" },
+      { name: "Tên sách 7", price: "30,000 VND" },
+      { name: "Tên sách 8", price: "100,000 VND" },
+      { name: "Tên sách 9", price: "0 VND" },
+      { name: "Tên sách 10", price: "120,000 VND" },
+    ];
+
+    const list = document.getElementById("book-list");
+
+    books.forEach((book) => {
+      const card = document.createElement("div");
+      card.className = "bg-white text-black rounded-lg overflow-hidden shadow-lg flex flex-col";
+
+      card.innerHTML = `
+        <div class="relative h-40 bg-gray-200 flex items-center justify-center">
+          <span class="absolute top-2 left-2 bg-orange-500 text-white text-sm px-2 py-1 rounded">${book.price}</span>
+          <span class="text-gray-500">Ảnh sách</span>
+        </div>
+        <div class="p-3 flex-grow">
+          <h3 class="font-semibold text-sm">${book.name}</h3>
+        </div>
+      `;
+      list.appendChild(card);
+    });
+  </script>
+  <!-- Footer -->
+  <footer class="bg-[#151530] text-gray-300 py-6 mt-10">
+    <p class="text-center text-sm mb-3">© 2025 BookNest. All rights reserved.</p>
+    <div class="flex justify-center space-x-6">
+      <!-- Facebook -->
+      <a href="#" class="hover:text-white" aria-label="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M22.675 0h-21.35C.596 0 0 .593 0 1.326v21.348C0 23.407.596 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.404 24 24 23.407 24 22.674V1.326C24 .593 23.404 0 22.675 0z"/>
+        </svg>
+      </a>
+
+      <!-- YouTube -->
+      <a href="#" class="hover:text-white" aria-label="YouTube">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19.615 3.184C21.403 3.688 22.5 5.6 22.5 7.5v9c0 1.9-1.097 3.813-2.885 4.316-3.394.906-12.836.906-16.23 0C1.597 20.313.5 18.4.5 16.5v-9c0-1.9 1.097-3.813 2.885-4.316 3.394-.906 12.836-.906 16.23 0zM9.75 15.02l6.25-3.52-6.25-3.52v7.04z"/>
+        </svg>
+      </a>
+
+      <!-- Twitter -->
+      <a href="#" class="hover:text-white" aria-label="Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.72 0-4.924 2.204-4.924 4.924 0 .39.044.765.127 1.124-4.094-.205-7.725-2.166-10.158-5.144-.425.729-.666 1.577-.666 2.475 0 1.708.87 3.214 2.188 4.096-.807-.025-1.566-.247-2.229-.616v.062c0 2.386 1.697 4.374 3.946 4.827-.413.112-.849.171-1.296.171-.318 0-.626-.031-.927-.088.627 1.956 2.444 3.379 4.6 3.419-1.68 1.317-3.801 2.103-6.102 2.103-.396 0-.788-.023-1.175-.069 2.179 1.397 4.768 2.21 7.557 2.21 9.054 0 14.001-7.496 14.001-13.986 0-.213-.005-.425-.014-.636.962-.694 1.797-1.562 2.457-2.549z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
