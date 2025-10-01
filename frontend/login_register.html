@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đăng nhập / Đăng ký - BookNest</title>
+    <link rel="stylesheet" href="./assets/css/login_register.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="nav">
+      <a href="#"><i class="fa fa-user"></i> Đăng nhập/Đăng ký</a>
+      <a href="index.html"><i class="fa fa-book"></i> Trang chủ</a>
+    </div>
+
+    <div class="container" id="form-container">
+      <div class="form-wrapper" id="form-wrapper">
+        <form class="auth-form" id="login-form">
+          <h2>Đăng nhập</h2>
+          <input type="email" id="login-email" placeholder="Email" required />
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Mật khẩu"
+            required
+          />
+          <button type="submit">Đăng nhập</button>
+          <div class="toggle-link">
+            <p>
+              Chưa có tài khoản?
+              <a href="#" onclick="toggleForm()">Đăng ký ngay</a>
+            </p>
+          </div>
+        </form>
+
+        <form class="auth-form" id="register-form">
+          <h2>Đăng ký</h2>
+          <input
+            type="text"
+            id="register-fullname"
+            placeholder="Họ tên"
+            required
+          />
+          <input
+            type="email"
+            id="register-email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            id="register-password"
+            placeholder="Mật khẩu"
+            required
+          />
+          <input
+            type="text"
+            id="register-phone"
+            placeholder="Số điện thoại"
+            required
+          />
+          <input
+            type="text"
+            id="register-address"
+            placeholder="Địa chỉ"
+            required
+          />
+          <button type="submit">Đăng ký</button>
+          <div class="toggle-link">
+            <p>
+              Đã có tài khoản? <a href="#" onclick="toggleForm()">Đăng nhập</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <p id="message"></p>
+    </div>
+
+    <script src="./assets/js/login-register.js"></script>
+  </body>
+</html>

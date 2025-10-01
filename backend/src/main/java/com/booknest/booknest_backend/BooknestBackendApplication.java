@@ -1,0 +1,13 @@
+package main.java.com.booknest.booknest_backend;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BooknestBackendApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BooknestBackendApplication.class, args);
+	}
+
+}

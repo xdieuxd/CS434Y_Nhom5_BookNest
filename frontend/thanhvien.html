@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ chung</title>
+    <link rel="stylesheet" href="./assets/css/trangchu.css" />
+    <script src="./assets/js/thanhvien.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="member-header">
+      <div class="logo">📚 BookNest</div>
+      <nav>
+        <a href="thanhvien.html">Trang chủ</a>
+        <a href="thuvien.html">Thư viện</a>
+        <a href="donhang.html">Đơn hàng</a>
+      </nav>
+      <div class="header-right">
+        <a href="giohang.html" class="cart-inline-link">
+          <i class="fas fa-shopping-cart"></i> Giỏ hàng
+        </a>
+        <div class="user-info">
+          <span id="username">👤</span>
+          <div class="dropdown-menu">
+            <a href="profile.html">Tài khoản cá nhân</a>
+            <a href="#" onclick="logout()">Đăng xuất</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="search-section">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-bar"
+        placeholder="🔍 Tìm kiếm sách..."
+      />
+    </section>
+
+    <section class="filter-section">
+      <select id="filterDropdown" class="filter-dropdown">
+        <option value="all">Tất cả thể loại</option>
+      </select>
+    </section>
+
+    <section class="book-grid" id="bookGrid"></section>
+
+    <section class="book-section">
+      <h2>Sách miễn phí</h2>
+      <div class="book-grid" id="freeBooks"></div>
+    </section>
+
+    <section class="book-section">
+      <h2>Sách mới nhất</h2>
+      <div class="book-grid" id="newestBooks"></div>
+    </section>
+
+    <footer>
+      <p>© 2025 BookNest. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </footer>
+  </body>
+</html>

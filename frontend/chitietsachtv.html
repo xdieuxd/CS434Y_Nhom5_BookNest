@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sách</title>
+    <link rel="stylesheet" href="./assets/css/trangchu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="member-header">
+      <div class="header-left">
+        <div class="logo">📚 BookNest</div>
+      </div>
+
+      <nav class="header-center">
+        <a href="thanhvien.html">Trang chủ</a>
+        <a href="thuvien.html">Thư viện</a>
+        <a href="donhang.html">Đơn hàng</a>
+      </nav>
+
+      <div class="header-right">
+        <a href="giohang.html" class="cart-inline-link">
+          <i class="fas fa-shopping-cart"></i> Giỏ hàng
+        </a>
+        <div class="user-info">
+          <span id="username">👤</span>
+          <div class="dropdown-menu">
+            <a href="profile.html">Tài khoản cá nhân</a>
+            <a href="#" onclick="logout()">Đăng xuất</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="book-detail-section">
+      <div class="book-detail">
+        <div class="book-detail-left">
+          <div class="book-img-container">
+            <img id="bookImage" src="" alt="Hình sách" class="book-img" />
+            <div id="priceBadge" class="price-badge"></div>
+          </div>
+        </div>
+        <div class="book-detail-right">
+          <h1 id="bookTitle"></h1>
+          <p><strong>Tác giả:</strong> <span id="bookAuthor"></span></p>
+          <p><strong>Thể loại:</strong> <span id="bookCategories"></span></p>
+          <p><strong>Giá:</strong> <span id="bookPrice"></span></p>
+          <p>
+            <strong>Ngày phát hành:</strong> <span id="bookReleaseDate"></span>
+          </p>
+          <p><strong>Số lượng tồn:</strong> <span id="bookStock"></span></p>
+          <p><strong>Mô tả:</strong> <span id="bookDescription"></span></p>
+          <div class="action-row">
+            <div id="bookAction"></div>
+            <button id="addToLibraryBtn" class="action-btn">
+              ➕ Thêm vào thư viện
+            </button>
+            <button id="addToLibraryBtn" class="action-btn">➕ Xem</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-section">
+        <h2>Đánh giá</h2>
+        <div id="averageRating"></div>
+        <div id="danhGiaList"></div>
+        <div class="review-form" id="reviewFormContainer" style="display: none">
+          <h3>Viết đánh giá của bạn</h3>
+          <form id="reviewForm">
+            <label for="rating">Số sao:</label>
+            <select id="rating" name="rating" required>
+              <option value="1">⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+            <label for="reviewComment">Nội dung:</label>
+            <textarea id="reviewComment" name="reviewComment"></textarea>
+            <div id="reviewError" style="color: red; margin-bottom: 10px"></div>
+            <button type="submit" class="action-btn">Gửi đánh giá</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="comment-section">
+        <h2>Bình luận</h2>
+        <div id="binhLuanList"></div>
+        <div
+          class="comment-form"
+          id="commentFormContainer"
+          style="display: none"
+        >
+          <h3>Viết bình luận của bạn</h3>
+          <form id="commentForm">
+            <label for="comment">Bình luận:</label>
+            <textarea id="comment" name="comment" required></textarea>
+            <button type="submit" class="action-btn">Gửi bình luận</button>
+          </form>
+        </div>
+        <div id="loginPrompt" style="display: none">
+          <p>
+            Vui lòng <a href="login-register.html">đăng nhập</a> để bình luận.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 BookNest. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+
+    <script src="./assets/js/chitietsachtv.js"></script>
+  </body>
+</html>
